@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Подключите библиотеку marked -->
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <h2>История чатов</h2>
+                <div class="chat-controls">
+                    <button onclick="createNewChat()">+</button>
+                    <button onclick="deleteCurrentChat()">🗑️</button>
+                </div>
+            </div>
+            <ul id="chat-history"></ul>
+        </div>
+        <div class="main">
+            <h2 id="chat-title">Выберите чат</h2>
+            <div id="chat-box" class="chat-box"></div>
+            <div class="input-container">
+                <input id="prompt-input" type="text" placeholder="Введите ваше сообщение...">
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

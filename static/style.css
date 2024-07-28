@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%; /* Фиксируем ширину панели со списком чатов на 25% экрана */
+    background-color: #333;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .header h2 {
+    margin: 0;
+    font-size: 1.5em; /* Увеличиваем размер шрифта заголовка */
+}
+
+.chat-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-controls button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-controls button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.chat-controls button:active {
+    background-color: #666;
+    transform: scale(0.95);
+}
+
+ul#chat-history {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+ul#chat-history li {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul#chat-history li.active {
+    background-color: #666;
+}
+
+ul#chat-history li:hover {
+    background-color: #555;
+}
+
+.main {
+    width: 100%; /* Основная область чата занимает оставшиеся 75% экрана */
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+}
+
+.main h2 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #252525;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    max-width: 60%;
+}
+
+.message.user {
+    align-self: flex-start; /* Выравнивание по левой стороне для сообщений пользователя */
+}
+
+.message.bot {
+    align-self: flex-start; /* Выравнивание по левой стороне для сообщений бота */
+    background-color: #444;
+}
+
+.input-container {
+    padding: 10px;
+    background-color: #333;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 1em;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+/* Стили для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Убирает двойные линии между ячейками */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    background-color: #333; /* Фоновый цвет таблицы */
+    border-radius: 5px; /* Закругленные углы таблицы */
+    overflow: hidden; /* Убирает скролл, если содержимое превышает размеры таблицы */
+}
+
+th, td {
+    border: 1px solid #444; /* Линия вокруг ячеек */
+    padding: 8px; /* Отступ внутри ячеек */
+    text-align: left; /* Выравнивание текста в ячейках */
+    color: #ffffff; /* Цвет текста в ячейках */
+}
+
+thead {
+    background-color: #555; /* Фоновый цвет шапки таблицы */
+}
+
+th {
+    font-weight: bold; /* Полужирный шрифт для заголовков */
+}
+
+tr:nth-child(even) {
+    background-color: #444; /* Чередование фона строк */
+}
+
+tr:hover {
+    background-color: #555; /* Фоновый цвет строки при наведении */
+}
